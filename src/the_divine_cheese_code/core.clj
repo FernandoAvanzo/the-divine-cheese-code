@@ -2,7 +2,7 @@
   (:gen-class))
 
 ;; Ensure that the SVG code is evaluated
-(require 'the-divine-cheese-code.visualization.svg)
+(require '[the-divine-cheese-code.visualization.svg :as svg])
 
 ;; Refer the namespace so that you don't have to use the
 ;; fully qualified name to reference svg functions
@@ -32,4 +32,4 @@
 
 (defn -main
   [& _]
-  (println (points heists)))
+  (println (svg/points heists)))
